@@ -1,0 +1,2 @@
+# smgdeneme
+smg deneme project
