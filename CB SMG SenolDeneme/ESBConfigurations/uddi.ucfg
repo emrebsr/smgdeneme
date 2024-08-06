@@ -1,0 +1,8 @@
+<configuration id="9600000663502371" name="uddi.ucfg"><content>[SDENEME]
+contenttype=application/json
+codepage=UTF8
+serviceType=rest
+tokenService = SDENEME1
+restHeaderAutParam=Authorization
+endpoint = @[[SDenemeEndpoint]]
+</content><version>1</version><componentId>9990000308707615</componentId><lastUpdated>1721807128109</lastUpdated><configurationType>5</configurationType><componentCmsOid>9990000308707615</componentCmsOid></configuration>

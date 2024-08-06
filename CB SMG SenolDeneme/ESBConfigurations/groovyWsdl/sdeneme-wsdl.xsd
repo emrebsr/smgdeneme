@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema xmlns:tns="http://ticarisicil.kkb.com.tr/uye" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ticarisicil.kkb.com.tr/uye">
+
+<xs:element name="detaySorgu" type="tns:detaySorgu"/>
+
+<xs:element name="detaySorguResponse" type="tns:detaySorguResponse"/>
+
+<xs:element name="ilanDetayi" type="tns:ilanDetayi"/>
+
+<xs:element name="ilanDetayiResponse" type="tns:ilanDetayiResponse"/>
+
+<xs:element name="ozetSorgu" type="tns:ozetSorgu"/>
+
+<xs:element name="ozetSorguResponse" type="tns:ozetSorguResponse"/>
+
+<xs:complexType name="ozetSorgu">
+<xs:sequence>
+<xs:element name="OzetSorguInput" type="tns:ozetSorguInput" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ozetSorguInput">
+<xs:sequence>
+<xs:element name="gazeteTarihiBaslangic" type="xs:string" minOccurs="0"/>
+<xs:element name="gazeteTarihiBitis" type="xs:string" minOccurs="0"/>
+<xs:element name="kurumEftKodu" type="xs:string" minOccurs="0"/>
+<xs:element name="mersisNo" type="xs:string" minOccurs="0"/>
+<xs:element name="ortakKimlikNo" type="xs:string" minOccurs="0"/>
+<xs:element name="tcKimlikNo" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilIli" type="xs:int"/>
+<xs:element name="tescilMerkezi" type="xs:int"/>
+<xs:element name="ticariSicilNo" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiKimlikNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ozetSorguResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ozetSorguOutput" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ozetSorguOutput">
+<xs:sequence>
+<xs:element name="hataAciklama" type="xs:string" minOccurs="0"/>
+<xs:element name="hataKodu" type="xs:string" minOccurs="0"/>
+<xs:element name="ilanlar" type="tns:ilanOzetBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="sorguRefNo" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ilanOzetBean">
+<xs:sequence>
+<xs:element name="firmaTescilIli" type="xs:int"/>
+<xs:element name="firmaTescilMerkezi" type="xs:int"/>
+<xs:element name="firmaTescilTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="gazeteSayfasi" type="xs:string" minOccurs="0"/>
+<xs:element name="gazeteSayisi" type="xs:string" minOccurs="0"/>
+<xs:element name="gazeteTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="hukukiYapi" type="xs:int"/>
+<xs:element name="ilanNo" type="xs:long"/>
+<xs:element name="mersisNo" type="xs:string" minOccurs="0"/>
+<xs:element name="tcKimlikNo" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilKonuList" type="tns:tescilKonuBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="unvan" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiDairesi" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiDairesiIli" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tescilKonuBean">
+<xs:sequence>
+<xs:element name="tescilKonusu" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="detaySorgu">
+<xs:sequence>
+<xs:element name="DetaySorguInput" type="tns:detaySorguInput" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="detaySorguInput">
+<xs:sequence>
+<xs:element name="gazeteTarihiBaslangic" type="xs:string" minOccurs="0"/>
+<xs:element name="gazeteTarihiBitis" type="xs:string" minOccurs="0"/>
+<xs:element name="kurumEftKodu" type="xs:string" minOccurs="0"/>
+<xs:element name="mersisNo" type="xs:string" minOccurs="0"/>
+<xs:element name="ortakKimlikNo" type="xs:string" minOccurs="0"/>
+<xs:element name="tcKimlikNo" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilIli" type="xs:int"/>
+<xs:element name="tescilMerkezi" type="xs:int"/>
+<xs:element name="ticariSicilNo" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiKimlikNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="detaySorguResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:detaySorguOutput" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="detaySorguOutput">
+<xs:sequence>
+<xs:element name="hataAciklama" type="xs:string" minOccurs="0"/>
+<xs:element name="hataKodu" type="xs:string" minOccurs="0"/>
+<xs:element name="ilanlar" type="tns:ilanBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="sorguRefNo" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ilanBean">
+<xs:sequence>
+<xs:element name="devirAlanList" type="tns:devirAlanBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="devirAlinanList" type="tns:devirAlinanBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="eskiOrtakList" type="tns:eskiOrtakBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="firmaUnvani" type="xs:string" minOccurs="0"/>
+<xs:element name="gazeteSayfa" type="xs:string" minOccurs="0"/>
+<xs:element name="gazeteSayi" type="xs:string" minOccurs="0"/>
+<xs:element name="gazeteTarih" type="xs:string" minOccurs="0"/>
+<xs:element name="ilanNo" type="xs:long"/>
+<xs:element name="kritikBilgiBean" type="tns:kritikBilgiBean" minOccurs="0"/>
+<xs:element name="ortakList" type="tns:ortakBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="sermayeBean" type="tns:sermayeBean" minOccurs="0"/>
+<xs:element name="sicilBean" type="tns:sicilBean" minOccurs="0"/>
+<xs:element name="subeBelirteci" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilAdresi" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilIlcesi" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilIli" type="xs:int"/>
+<xs:element name="tescilKonuList" type="tns:tescilKonuBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="tescilPostaKodu" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="tuzelOrtakList" type="tns:tuzelOrtakBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="unvanBean" type="tns:unvanBean" minOccurs="0"/>
+<xs:element name="webAdresi" type="xs:string" minOccurs="0"/>
+<xs:element name="yoneticiList" type="tns:yoneticiBean" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="devirAlanBean">
+<xs:sequence>
+<xs:element name="sicilNo" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilIli" type="xs:int"/>
+<xs:element name="tescilMerkezi" type="xs:int"/>
+<xs:element name="unvan" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiDairesi" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiDairesiIli" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="devirAlinanBean">
+<xs:sequence>
+<xs:element name="devirTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="hukukiYapisi" type="xs:int"/>
+<xs:element name="sicilNo" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilIli" type="xs:int"/>
+<xs:element name="tescilMerkezi" type="xs:int"/>
+<xs:element name="unvan" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiDairesi" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiDairesiIli" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eskiOrtakBean">
+<xs:sequence>
+<xs:element name="ayrilmaTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="tcKimlikNo" type="xs:string" minOccurs="0"/>
+<xs:element name="unvan" type="xs:string" minOccurs="0"/>
+<xs:element name="vefatDurumu" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="kritikBilgiBean">
+<xs:sequence>
+<xs:element name="bolunmeBilgileri" type="xs:string" minOccurs="0"/>
+<xs:element name="dosyaSayiEsasNo" type="xs:string" minOccurs="0"/>
+<xs:element name="faaliyeteDonusTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="icraIflas" type="xs:string" minOccurs="0"/>
+<xs:element name="icraIflasMudurlugu" type="xs:string" minOccurs="0"/>
+<xs:element name="konkardato" type="xs:string" minOccurs="0"/>
+<xs:element name="tasfiye" type="xs:string" minOccurs="0"/>
+<xs:element name="tasfiyedenDonus" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ortakBean">
+<xs:sequence>
+<xs:element name="eskiHisseOrani" type="xs:double"/>
+<xs:element name="hisseOrani" type="xs:double"/>
+<xs:element name="tcKimlikNo" type="xs:string" minOccurs="0"/>
+<xs:element name="unvan" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sermayeBean">
+<xs:sequence>
+<xs:element name="dovizCinsi" type="xs:int"/>
+<xs:element name="eskiSermayeTutari" type="xs:long"/>
+<xs:element name="sermayeArttirimTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="sermayeTutari" type="xs:long"/>
+<xs:element name="sonToplantiTarihi" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sicilBean">
+<xs:sequence>
+<xs:element name="hukukiYapi" type="xs:int"/>
+<xs:element name="kimlikNo" type="xs:string" minOccurs="0"/>
+<xs:element name="kimlikTuru" type="xs:string" minOccurs="0"/>
+<xs:element name="mersisNo" type="xs:string" minOccurs="0"/>
+<xs:element name="mersisNoTam" type="xs:string" minOccurs="0"/>
+<xs:element name="sicilNo" type="xs:long"/>
+<xs:element name="sicilNoTam" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilDetayi" type="xs:string" minOccurs="0"/>
+<xs:element name="tescilIli" type="xs:int"/>
+<xs:element name="tescilMerkezi" type="xs:int"/>
+<xs:element name="vergiDairesi" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiDairesiIli" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tuzelOrtakBean">
+<xs:sequence>
+<xs:element name="eskiHisseOrani" type="xs:double"/>
+<xs:element name="hisseOrani" type="xs:double"/>
+<xs:element name="sirketTipi" type="xs:string" minOccurs="0"/>
+<xs:element name="unvan" type="xs:string" minOccurs="0"/>
+<xs:element name="vergiNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unvanBean">
+<xs:sequence>
+<xs:element name="eskiSicilNo" type="xs:string" minOccurs="0"/>
+<xs:element name="eskiTescilIli" type="xs:int"/>
+<xs:element name="eskiTescilMerkezi" type="xs:int"/>
+<xs:element name="eskiUnvan" type="xs:string" minOccurs="0"/>
+<xs:element name="hukukYapisiDegisimTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="sicilDegisimTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="unvanDegisimTarihi" type="xs:string" minOccurs="0"/>
+<xs:element name="yeniHukukYapisi" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="yoneticiBean">
+<xs:sequence>
+<xs:element name="adi" type="xs:string" minOccurs="0"/>
+<xs:element name="digerGorevi" type="xs:string" minOccurs="0"/>
+<xs:element name="gorevi" type="xs:int"/>
+<xs:element name="imzaYetkisi" type="xs:int"/>
+<xs:element name="soyadi" type="xs:string" minOccurs="0"/>
+<xs:element name="tcKimlikNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ilanDetayi">
+<xs:sequence>
+<xs:element name="IlanDetayiInput" type="tns:ilanDetayiInput" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ilanDetayiInput">
+<xs:sequence>
+<xs:element name="ilanNo" type="xs:long"/>
+<xs:element name="kurumEftKodu" type="xs:string" minOccurs="0"/>
+<xs:element name="sorguRefNo" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ilanDetayiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ilanDetayiOutput" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ilanDetayiOutput">
+<xs:sequence>
+<xs:element name="hataAciklama" type="xs:string" minOccurs="0"/>
+<xs:element name="hataKodu" type="xs:string" minOccurs="0"/>
+<xs:element name="ilanBean" type="tns:ilanBean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

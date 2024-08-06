@@ -1,0 +1,74 @@
+<definitions name="UyeTicariSicilHizmeti" targetNamespace="http://ticarisicil.kkb.com.tr/uye" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ticarisicil.kkb.com.tr/uye" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<types>
+<xsd:schema>
+<xsd:import namespace="http://ticarisicil.kkb.com.tr/uye" schemaLocation="inb-ticari-sicil-uye.xsd"/>
+</xsd:schema>
+</types>
+<message name="ozetSorgu">
+<part element="tns:ozetSorgu" name="parameters"/>
+</message>
+<message name="ozetSorguResponse">
+<part element="tns:ozetSorguResponse" name="parameters"/>
+</message>
+<message name="ilanDetayi">
+<part element="tns:ilanDetayi" name="parameters"/>
+</message>
+<message name="ilanDetayiResponse">
+<part element="tns:ilanDetayiResponse" name="parameters"/>
+</message>
+<message name="detaySorgu">
+<part element="tns:detaySorgu" name="parameters"/>
+</message>
+<message name="detaySorguResponse">
+<part element="tns:detaySorguResponse" name="parameters"/>
+</message>
+<portType name="UyeTicariSicilHizmeti">
+<operation name="ozetSorgu">
+<input message="tns:ozetSorgu"/>
+<output message="tns:ozetSorguResponse"/>
+</operation>
+<operation name="ilanDetayi">
+<input message="tns:ilanDetayi"/>
+<output message="tns:ilanDetayiResponse"/>
+</operation>
+<operation name="detaySorgu">
+<input message="tns:detaySorgu"/>
+<output message="tns:detaySorguResponse"/>
+</operation>
+</portType>
+<binding name="UyeTicariSicilHizmetiPortBinding" type="tns:UyeTicariSicilHizmeti">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="ozetSorgu">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="ilanDetayi">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="detaySorgu">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+</binding>
+<service name="UyeTicariSicilHizmeti">
+<port binding="tns:UyeTicariSicilHizmetiPortBinding" name="UyeTicariSicilHizmetiPort">
+<soap:address location="https://apigwb.kkb.com.tr:443/inb/ticari-sicil/uye"/>
+</port>
+</service>
+</definitions>

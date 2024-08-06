@@ -1,0 +1,276 @@
+<fbml pid="SMG20021" t="$type$" v="$version$">
+    <interface>
+        <structure>
+            <bean class="cb.smg.fde.JFBCompositePane" id="FRE.0423520">
+                <style>
+                    <p name="title">#{12345}</p>
+                    <p name="bounds">0,0,785,510</p>
+                </style>
+                <bean class="cb.smg.fde.JFBPanelBase" id="0423520.parent">
+                    <style>
+                        <p name="title">#{12345}</p>
+                        <p name="bounds">10,10,775,155</p>
+                    </style>
+                    <bean class="cb.smg.fde.bean.JFBLabel" id="parent.JFBLabel551295">
+                        <style>
+                            <p name="text">#{12345}</p>
+                            <p name="bounds">380,90,150,20</p>
+                        </style>
+                    </bean>
+                    <bean class="cb.smg.fde.bean.JFBLabel" id="parent.JFBLabel551295">
+                        <style>
+                            <p name="text">#{12345}</p>
+                            <p name="bounds">30,30,110,20</p>
+                        </style>
+                    </bean>
+                </bean>
+                <bean class="cb.smg.fde.bean.JFBTabbedPane" id="0423520.TabPage">
+                    <style>
+                        <p name="bounds">10,160,775,350</p>
+                    </style>
+                    <bean class="cb.smg.fde.JFBTabPanel" id="TabPage.TabLisan">
+                        <style>
+                            <p name="tabtext">#{12345}</p>
+                            <p name="bounds">2,26,770,321</p>
+                        </style>
+
+                        <bean class="cb.smg.fde.bean.JFBLabel" id="TabLisan.JFBLabel5135925">
+                            <style>
+                                <p name="text">#{12345}</p>
+                                <p name="bounds">20,140,110,25</p>
+                            </style>
+                        </bean>
+                    </bean>
+                    <bean class="cb.smg.fde.JFBTabPanel" id="TabPage.tab1127429">
+                        <style>
+                            <p name="tabtext">#{12345}</p>
+                            <p name="bounds">2,26,770,321</p>
+                        </style>
+                        <bean class="cb.smg.fde.bean.JFBTable" id="tab1127429.TABLE_AILE">
+                            <style>
+                                <p name="rowSelectionAllowed">false</p>
+                                <p name="headerInfo">141~BILGIKODU~#{12345}~true~false$143~BILGIDEGERITEXT~#{12345}~true~false$15~OID~#{12345}~true~true$15~UYGULAMA~#{12345}~true~true$</p>
+                                <p name="tabOrder">40</p>
+                                <p name="bounds">10,20,350,280</p>
+                            </style>
+                        </bean>
+                        <bean class="cb.smg.fde.JFBPanel" id="tab1127429.Name4053608">
+                            <style>
+                                <p name="text"/>
+                                <p name="bounds">370,20,390,280</p>
+                            </style>
+                            <bean class="cb.smg.fde.bean.JFBLabel" id="Name4053608.JFBLabel4025538">
+                                <style>
+                                    <p name="text">#{12345}</p>
+                                    <p name="bounds">30,30,110,25</p>
+                                </style>
+                            </bean>
+                        </bean>
+                    </bean>
+                </bean>
+            </bean>
+        </structure>
+        <events>
+            <lC id="pageLoad" n="pageLoad">
+                <refC s="PRM_LISAN">
+                    <i>
+                        <p n="DATE">20010308</p>
+                    </i>
+                    <o>
+                        <p n="&lt;params 0=DILKODU&gt;1&lt;/params&gt;" id="TabLisan.LISANKODU">DILADI</p>
+                    </o>
+                </refC>
+                <refC s="PRM_DOVIZ">
+                    <i>
+                        <p n="DATE">20010308</p>
+                    </i>
+                    <o>
+                        <p n="&lt;params 0=DOVIZKODU&gt;1&lt;/params&gt;" id="TabVarliklar.DOVIZCINSI">DOVIZADI</p>
+                        <p n="&lt;params 0=DOVIZKODU&gt;1&lt;/params&gt;" id="TabCalisilanBankalar.DOVIZCINSI">DOVIZADI</p>
+                    </o>
+                </refC>
+                <p id="Name4053608.UYGULAMA_AILE" n="text">AILE</p>
+                <rC s="MUSTERI_UYGULAMAYAGOREBILGITANIMLARICOMBOFILL">
+                    <i>
+                        <p n="UYGULAMA" id="Name4053608.UYGULAMA_AILE"/>
+                    </i>
+                    <o>
+                        <p id="Name4053608.AILE_BILGIKODU" n="EKBILGIKODU"/>
+                    </o>
+                </rC>
+                <p id="MALIDURUM_BILGIKODU.UYGULAMA_MALIDURUM" n="text">MALIDURUM</p>
+                <rC s="MUSTERI_UYGULAMAYAGOREBILGITANIMLARICOMBOFILL">
+                    <i>
+                        <p n="UYGULAMA" id="MALIDURUM_BILGIKODU.UYGULAMA_MALIDURUM"/>
+                    </i>
+                    <o>
+                        <p id="MALIDURUM_BILGIKODU.MALIDURUM_BILGIKODU" n="EKBILGIKODU"/>
+                    </o>
+                </rC>
+                <p n="selectedTab" id="0423520.TabPage">0</p>
+            </lC>
+            <lC id="parent.MUSTERINO" n="actionPerformed">
+                <rC s="MUSTERI_MUSTERIGETIR">
+                    <i>
+                        <p id="parent.MUSTERINO"/>
+                    </i>
+                    <o>
+                        <p n="SOYAD" id="parent.SOYAD"/>
+                        <p n="AD" id="parent.AD"/>
+                        <p n="MUSTERIOID" id="parent.MUSTERIOID"/>
+                        <p n="MUSTERINO" id="parent.MUSTERINO"/>
+                        <p n="DOGUMYERITEXT" id="parent.DOGUMYERITEXT"/>
+                        <p n="DOGUMTARIHI" id="parent.DOGUMTARIHI"/>
+                        <p n="VERGIDAIRESI" id="parent.VERGIDAIRESI"/>
+                        <p n="VERGINO" id="parent.VERGINO"/>
+                        <p n="TICARETSICILNO" id="parent.TICARETSICILNO"/>
+                        <p n="BABAADI" id="parent.BABAADI"/>
+                    </o>
+                </rC>
+                <p n="selectedTab" id="0423520.TabPage">0</p>
+            </lC>
+            <lC id="TabLisan.TABLE_LISAN" n="mousePressed">
+                <p id="TabLisan.LISANOID" n="text">
+                    <table col="OID" id="TabLisan.TABLE_LISAN"/>
+                </p>
+                <rC s="MUSTERI_LISANGETIRTEK">
+                    <i>
+                        <p id="TabLisan.LISANOID"/>
+                    </i>
+                    <o>
+                        <p n="LISANKODU" id="TabLisan.LISANKODU"/>
+                        <p n="DUZEY" id="TabLisan.DUZEY"/>
+                        <p n="YETERLILIKOLCEGI" id="TabLisan.YETERLILIKOLCEGI"/>
+                        <p n="DERECESI" id="TabLisan.DERECESI"/>
+                    </o>
+                </rC>
+            </lC>
+            <lC rule="A_BOSBILGIKODU" id="Name4053608.AILE_BILGIKODU" n="itemStateChanged">
+                <p id="Name4053608.AVERITIPI" n="selectedValue">A</p>
+            </lC>
+            <lC rule="!A_SECIMLIKBILGI" id="Name4053608.AVERITIPI" n="itemStateChanged">
+                <p id="Name4053608.AILE_BILGIDEGERICOMBO" n="visible">false</p>
+                <p id="Name4053608.LBL_DEGERCOMBO" n="visible">false</p>
+                <p id="Name4053608.AILE_BILGIDEGERITEXT" n="visible">true</p>
+                <p id="Name4053608.LBL_DEGERTEXT" n="visible">true</p>
+                <p rule="A_SAYISALBILGI" id="Name4053608.AILE_BILGIDEGERITEXT" n="contenttype">Numeric</p>
+                <p rule="A_ALFASAYISALBILGI" id="Name4053608.AILE_BILGIDEGERITEXT" n="contenttype">Alpha</p>
+            </lC>
+            <lC rule="M_BOSBILGIKODU" id="MALIDURUM_BILGIKODU.MALIDURUM_BILGIKODU" n="itemStateChanged">
+                <p n="selectedValue" id="MALIDURUM_BILGIKODU.MVERITIPI">A</p>
+            </lC>
+            <lC rule="D_BOSBILGIKODU" id="JFBPanel2855916.DIGER_BILGIKODU" n="itemStateChanged">
+                <p id="JFBPanel2855916.DVERITIPI" n="selectedValue">A</p>
+            </lC>
+            <lC id="tab114138.TABLE_DIGER" n="mouseDoubleClicked">
+                <p id="JFBPanel2855916.DEMOGRAFIKOID_DIGER" n="text">
+                    <table col="OID" id="tab114138.TABLE_DIGER"/>
+                </p>
+                <rC s="MUSTERI_DEMOGRAFIKBILGITANIMIGETIRTEK">
+                    <i>
+                        <p id="JFBPanel2855916.DEMOGRAFIKOID_DIGER" n="DEMOGRAFIKOID"/>
+                        <p id="parent.MUSTERIOID"/>
+                    </i>
+                    <o>
+                        <p id="JFBPanel2855916.DIGER_BILGIKODU" n="BILGIKODU"/>
+                        <p id="JFBPanel2855916.DIGER_BILGIDEGERICOMBO" n="BILGIDEGERITEXT"/>
+                        <p id="JFBPanel2855916.DIGER_BILGIDEGERITEXT" n="BILGIDEGERITEXT"/>
+                    </o>
+                </rC>
+            </lC>
+            <lC id="JFBPanel2855916.LCL_DIGERGUNCELLE" n="actionPerformed">
+                <rC s="MUSTERI_DEMOGRAFIKBILGITANIMIGUNCELLE">
+                    <i>
+                        <p id="parent.MUSTERIOID"/>
+                        <p id="JFBPanel2855916.DIGER_BILGIKODU" n="BILGIKODU"/>
+                        <p id="JFBPanel2855916.DIGER_BILGIDEGERITEXT" n="BILGIDEGERITEXT"/>
+                        <p id="JFBPanel2855916.UYGULAMA_DIGER" n="UYGULAMA"/>
+                        <p id="JFBPanel2855916.DEMOGRAFIKOID_DIGER" n="DEMOGRAFIKOID"/>
+                    </i>
+                    <o/>
+                </rC>
+                <rC s="MUSTERI_UYGULAMAYAGOREDIGERBILGILERIGETIR">
+                    <i>
+                        <p id="parent.MUSTERIOID"/>
+                        <p id="JFBPanel2855916.UYGULAMA_DIGER" n="UYGULAMA"/>
+                    </i>
+                    <o>
+                        <p id="tab114138.TABLE_DIGER" n="BILGILER"/>
+                    </o>
+                </rC>
+            </lC>
+            <lC id="JFBPanel2855916.LCL_DIGERIPTALET" n="actionPerformed">
+                <rC s="MUSTERI_DEMOGRAFIKBILGITANIMIIPTALET">
+                    <i>
+                        <p id="parent.MUSTERIOID"/>
+                        <p id="JFBPanel2855916.DEMOGRAFIKOID_DIGER" n="DEMOGRAFIKOID"/>
+                    </i>
+                    <o/>
+                </rC>
+                <rC s="MUSTERI_UYGULAMAYAGOREDIGERBILGILERIGETIR">
+                    <i>
+                        <p id="parent.MUSTERIOID"/>
+                        <p id="JFBPanel2855916.UYGULAMA_DIGER" n="UYGULAMA"/>
+                    </i>
+                    <o>
+                        <p id="tab114138.TABLE_DIGER" n="BILGILER"/>
+                    </o>
+                </rC>
+            </lC>
+        </events>
+    </interface>
+    <data>
+        <d id="TabLisan.YETERLILIKOLCEGI">
+            <data n="TOEFL">TOEFL</data>
+        </d>
+        <d id="TabLisan.DUZEY">
+            <data n="ORTA">ORTA</data>
+        </d>
+        <d id="TabEgitim.ASAMA">
+            <data n="ILK">ILK</data>
+            <data n="LISANS">LISANS</data>
+            <data n="LISE">LISE</data>
+            <data n="ON-LISANS">ON-LISANS</data>
+            <data n="ORTA">ORTA</data>
+        </d>
+        <d id="TabEgitim.MEZUNIYETDURUMU">
+            <data n="MEZUN">MEZUN</data>
+            <data n="OKUYOR">OKUYOR</data>
+            <data n="TERK">TERK</data>
+        </d>
+        <d id="Name4053608.AVERITIPI">
+            <data n="A">ALFASAYISAL</data>
+            <data n="S">SAYISAL</data>
+            <data n="C">SEÇÝMLÝK</data>
+        </d>
+        <oneDim id="TabEgitim.MEZUNIYETDURUMU">
+            <data n="MEZUN">MEZUN</data>
+            <data n="OKUYOR">OKUYOR</data>
+            <data n="TERK">TERK</data>
+        </oneDim>
+        <oneDim id="TabCalisilanBankalar.URUNTURU">
+            <data n="MEVDUAT">MEVDUAT</data>
+            <data n="KREDI">KREDI</data>
+            <data n="KREDI KARTI">KREDI KARTI</data>
+        </oneDim>
+    </data>
+    <variables/>
+    <ruleset>
+        <rule source="Name4053608.AILE_BILGIKODU" target="" op="EQ" id="A_BOSBILGIKODU"/>
+        <rule source="Name4053608.AVERITIPI" target="C" op="EQ" id="A_SECIMLIKBILGI"/>
+        <rule source="Name4053608.AVERITIPI" target="A" op="EQ" id="A_ALFASAYISALBILGI"/>
+        <rule source="Name4053608.AVERITIPI" target="S" op="EQ" id="A_SAYISALBILGI"/>
+        <rule source="Name4053608.DEMOGRAFIKOID_AILE" target="" op="EQ" id="A_BOSOID"/>
+        <rule source="MALIDURUM_BILGIKODU.MALIDURUM_BILGIKODU" target="" op="EQ" id="M_BOSBILGIKODU"/>
+        <rule source="MALIDURUM_BILGIKODU.MVERITIPI" target="C" op="EQ" id="M_SECIMLIKBILGI"/>
+        <rule source="MALIDURUM_BILGIKODU.MVERITIPI" target="A" op="EQ" id="M_ALFASAYISALBILGI"/>
+        <rule source="MALIDURUM_BILGIKODU.MVERITIPI" target="S" op="EQ" id="M_SAYISALBILGI"/>
+        <rule source="MALIDURUM_BILGIKODU.DEMOGRAFIKOID_MALIDURUM" target="" op="EQ" id="M_BOSOID"/>
+        <rule source="JFBPanel2855916.DIGER_BILGIKODU" target="" op="EQ" id="D_BOSBILGIKODU"/>
+        <rule source="JFBPanel2855916.DVERITIPI" target="C" op="EQ" id="D_SECIMLIKBILGI"/>
+        <rule source="JFBPanel2855916.DVERITIPI" target="A" op="EQ" id="D_ALFASAYISALBILGI"/>
+        <message id="BAKIYE_YETERSIZ_MESAJ" title="Uyarý" type="OK">Müþterinin bakiyesi yetersiz !!!</message>
+        <rule source="JFBPanel2855916.DVERITIPI" target="S" op="EQ" id="D_SAYISALBILGI"/>
+        <rule source="JFBPanel2855916.DEMOGRAFIKOID_DIGER" target="" op="EQ" id="D_BOSOID"/>
+    </ruleset>
+</fbml>

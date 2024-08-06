@@ -1,0 +1,10 @@
+<region pid="PP_TEST225" v="$version$">
+   <bean class="cb.smg.fde.JFBRegion">
+      <style>
+         <p name="text">#{709}</p>
+      </style>
+   </bean>
+   <data></data>
+   <events></events>
+   <ruleset></ruleset>
+</region>

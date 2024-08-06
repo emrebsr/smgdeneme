@@ -1,0 +1,15 @@
+<fbml pid="SMG20025" size="1024,768" t="$type$" v="$version$">
+   <interface>
+      <structure>
+         <bean class="cb.smg.fde.JFBPanelBase" id="FRE.SinglePage">
+            <style>
+               <p name="bounds">10,10,1000,660</p>
+            </style>
+         </bean>
+      </structure>
+      <events></events>
+   </interface>
+   <data></data>
+   <navigation></navigation>
+   <ruleset></ruleset>
+</fbml>
